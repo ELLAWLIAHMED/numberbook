@@ -1,0 +1,7 @@
+{
+  "name": "numberbook",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
