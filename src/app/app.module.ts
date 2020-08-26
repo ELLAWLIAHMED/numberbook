@@ -5,10 +5,14 @@ import { CommonModule } from '@angular/common';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Contacts } from '@ionic-native/contacts/ngx';
+import { CallNumber } from '@ionic-native/call-number/ngx';
+import { SMS } from '@ionic-native/sms/ngx';
 
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule} from '@angular/forms';
 // firebase modules
@@ -22,7 +26,8 @@ import { FirebaseService} from './firebase.service';
 @NgModule({
   declarations: [AppComponent,
                  RegisterComponent,
-                 LoginComponent
+                 LoginComponent,
+                 ContactComponent
                ],
   entryComponents: [],
   imports: [
@@ -39,7 +44,11 @@ import { FirebaseService} from './firebase.service';
     StatusBar,
     SplashScreen,
     FirebaseService,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Contacts,
+    CallNumber,
+    SMS
+
   ],
   bootstrap: [AppComponent]
 })

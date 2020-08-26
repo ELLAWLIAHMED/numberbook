@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../../firebase.service';
 import {Router} from '@angular/router';
+import { Plugins } from '@capacitor/core';
+import { AlertController } from '@ionic/angular';
+
+const { Geolocation } = Plugins;
+
 @Component({
   selector: 'register',
   templateUrl: './register.component.html',
@@ -19,7 +24,8 @@ export class RegisterComponent implements OnInit {
   users:any[];
   //validInfo:boolean=!this.name || !this.email ;
  
-  constructor(private firebaservice:FirebaseService,private router:Router) { }
+  mylongitude:any;
+  constructor(private firebaservice:FirebaseService,private router:Router,public alertController: AlertController     ) { }
 
   ngOnInit() {
     fetch('https://raw.githubusercontent.com/AccessGateLabs/useful-jsons/master/country-codes/country-code-with-svg-flag.json')
@@ -38,10 +44,31 @@ export class RegisterComponent implements OnInit {
       })
     });
     
-    
+    Geolocation.getCurrentPosition()
+    .then(
+      (localisation) => {
+        this.mylongitude=localisation.coords.longitude;
+        this.presentAlert()
+      }
+    )
+    .catch(
+      (error) => console.log(error)
+    );
     
     
   
+  }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Localisation',
+      subHeader: 'My longitude',
+      message: this.mylongitude,
+      buttons: ['OK']
+    });
+
+    await alert.present();
   }
   changed(value){
       this.selectedCountry=value;

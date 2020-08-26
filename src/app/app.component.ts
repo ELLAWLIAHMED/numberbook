@@ -23,6 +23,11 @@ export class AppComponent implements OnInit {
       icon: 'log-in'
     },
     {
+      title: 'Contact List',
+      url: '/contact',
+      icon: 'log-in'
+    },
+    {
       title: 'Home',
       url: '/folder/Inbox',
       icon: 'home'

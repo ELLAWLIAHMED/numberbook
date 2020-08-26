@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title><b>Contact List</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-toolbar>
+    <ion-card class="card-search">
+      <ion-card-header>
+        <ion-item lines="none">
+          <ion-input placeholder=" Search Contact" (ionChange)="search($event.target.value)" class="input-search" #searchInput>
+            <ion-icon name="search-outline"></ion-icon>
+          </ion-input>
+          <ion-button  fill="clear" item-right  (click)="searchInput.value = ''"  *ngIf="reset" >
+            <ion-icon slot="icon-only" name="close"></ion-icon>
+          </ion-button >
+        </ion-item> 
+      </ion-card-header>
+    </ion-card>
+</ion-toolbar> 
+
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div class="loading">
+        <ion-spinner color="success" name="crescent" *ngIf="loading"></ion-spinner>
+    </div>
+    
+
+          <ion-item button *ngFor="let item of mycontacts" (click)="ShowDetails(item)" >           
+            <div class="avatar-circle" [ngStyle]="{'background-color': getRandomColor()}">
+              <span class="initials">{{item.displayName != null  ? item.displayName[0]: ''}}</span>
+            </div>
+            <ion-grid>
+              <ion-row>{{item.displayName}}</ion-row>
+              <ion-row class="phoneNumber">{{item.phoneNumbers[0].value}}</ion-row>
+            </ion-grid> 
+          </ion-item>
+  </div>
+</ion-content>

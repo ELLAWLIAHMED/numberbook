@@ -1,0 +1,31 @@
+<div id="container">
+  <ion-button fill="clear" (click)="close()">
+    <ion-icon name="chevron-back-outline"></ion-icon>
+    Back
+  </ion-button>
+  <ion-card> 
+    <ion-card-header>
+      <img src="https://green-growth-org-uk.cdn.gofasterstripes.download/sites/default/files/styles/profile-logo/public/default_images/anonymous-profile_0.png?itok=XJiSfEYM">
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-grid>
+        <ion-row class="row-button">
+          <ion-col>
+              <ion-button color="success" expand="full" (click)="Call()" >
+                <ion-icon slot="icon-only" name="call-outline"></ion-icon>
+              </ion-button>
+          </ion-col>
+          <ion-col>
+              <ion-button color="success" expand="full" (click)="WriteSMS(Selectedcontact.phoneNumbers[0].value)">
+                <ion-icon slot="icon-only" name="chatbubble-outline"></ion-icon>
+              </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row><strong> Full Name           : {{Selectedcontact.displayName}}</strong></ion-row>
+        <ion-row><strong> Phone Number : {{Selectedcontact.phoneNumbers[0].value}}</strong></ion-row>
+      </ion-grid> 
+    </ion-card-content>
+  </ion-card>
+</div>
+

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-
+import { ContactComponent } from './components/contact/contact.component';
 const routes: Routes = [
   {
     path: '',
@@ -20,6 +20,10 @@ const routes: Routes = [
   {
     path:'login',
     component:LoginComponent
+  },
+  {
+    path:'contact',
+    component:ContactComponent
   },
   {
     path: 'logout',
