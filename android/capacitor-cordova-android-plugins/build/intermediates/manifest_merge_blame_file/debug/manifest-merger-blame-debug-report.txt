@@ -1,0 +1,39 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:amazon="http://schemas.amazon.com/apk/res/android"
+3    xmlns:android="http://schemas.android.com/apk/res/android"
+4    package="capacitor.android.plugins"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="21"
+9-->C:\Users\hp\Desktop\numberbook\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+10        android:targetSdkVersion="29" />
+10-->C:\Users\hp\Desktop\numberbook\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+11
+12    <uses-permission android:name="android.permission.CALL_PHONE" />
+12-->C:\Users\hp\Desktop\numberbook\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:8:1-64
+12-->C:\Users\hp\Desktop\numberbook\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:8:18-62
+13
+14    <uses-feature
+14-->C:\Users\hp\Desktop\numberbook\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:9:1-83
+15        android:name="android.hardware.telephony"
+15-->C:\Users\hp\Desktop\numberbook\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:9:15-56
+16        android:required="false" />
+16-->C:\Users\hp\Desktop\numberbook\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:9:57-81
+17
+18    <uses-permission android:name="android.permission.READ_CONTACTS" />
+18-->C:\Users\hp\Desktop\numberbook\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:10:1-67
+18-->C:\Users\hp\Desktop\numberbook\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:10:18-65
+19    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+19-->C:\Users\hp\Desktop\numberbook\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:11:1-68
+19-->C:\Users\hp\Desktop\numberbook\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:11:18-66
+20    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+20-->C:\Users\hp\Desktop\numberbook\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:12:1-66
+20-->C:\Users\hp\Desktop\numberbook\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:12:18-64
+21
+22    <application>
+22-->C:\Users\hp\Desktop\numberbook\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:5:1-7:15
+23    </application>
+24
+25</manifest>
